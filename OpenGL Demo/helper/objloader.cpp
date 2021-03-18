@@ -51,9 +51,32 @@ void load_obj(const char* filename, vector<glm::vec3> &vertices, vector<glm::vec
         }
         else if (line.substr(0,2) == "f ")
         {
-            istringstream s(line.substr(2));
             GLushort a,b,c;
-            s >> a; s >> b; s >> c;
+            string sub_a, sub_b, sub_c;
+            
+            string substring = line.substr(2);
+            
+            if(substring.find("/")){
+                int find_a_pos = substring.find(" ");
+                sub_a = substring.substr(0, find_a_pos);
+                istringstream s(sub_a.substr(0, sub_a.find("/")));
+                s >> a;
+                
+                substring = substring.substr(find_a_pos+1);
+                int find_b_pos = substring.find(" ");
+                sub_b = substring.substr(0, find_b_pos);
+                istringstream ss(sub_b.substr(0, sub_b.find("/")));
+                ss >> b;
+                
+                sub_c = substring.substr(find_b_pos+1);
+                istringstream sss(sub_c.substr(0, sub_c.find("/")));
+                sss >> c;
+            } else {
+                istringstream s(substring);
+                GLushort a,b,c;
+                s >> a; s >> b; s >> c;
+            }
+            
             a--; b--; c--;
            elements.push_back(a); elements.push_back(b); elements.push_back(c);
         }

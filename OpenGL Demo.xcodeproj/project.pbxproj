@@ -41,7 +41,6 @@
 		DDDBDAC32457EE5B00C2C96A /* lamp.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = lamp.obj; sourceTree = "<group>"; };
 		DDEEE16124426C3A0078BA75 /* objloader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = objloader.cpp; sourceTree = "<group>"; };
 		DDEEE16224426C3A0078BA75 /* objloader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = objloader.hpp; sourceTree = "<group>"; };
-		DDEEE164244271D10078BA75 /* cube.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
 		DDEEE165244277C90078BA75 /* control.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = control.cpp; sourceTree = "<group>"; };
 		DDEEE166244277C90078BA75 /* control.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = control.hpp; sourceTree = "<group>"; };
 		DDEEE16824427B1C0078BA75 /* pumpkin.obj */ = {isa = PBXFileReference; lastKnownFileType = text; path = pumpkin.obj; sourceTree = "<group>"; };
@@ -101,7 +100,6 @@
 				DDA3BE1F243E981B0069EF2D /* main.cpp */,
 				DD8A1FA524425A3F00CFD59D /* fragmentShader */,
 				DD8A1FA624425A5A00CFD59D /* vertexShader */,
-				DDEEE164244271D10078BA75 /* cube.obj */,
 				DDEEE16824427B1C0078BA75 /* pumpkin.obj */,
 				DDEEE169244410B50078BA75 /* cow.obj */,
 				DDEEE16A244977B10078BA75 /* shadowVertexShader */,

@@ -8,13 +8,14 @@ uniform mat4 MODEL;
 uniform mat4 VIEW;
 uniform mat4 PROJECTION;
 uniform mat4 LIGHTSPACE;
+uniform mat4 LIGHTSPACE2;
 uniform vec3 LIGHT_POS;
 
 //output
 out vec3 FragPos;
 out vec3 Normal;
 out vec4 FragLightSpace;
-
+out vec4 FragLightSpace2;
 
 void main(){
     vec4 world_pos = MODEL * vec4(vertex_position, 1);
@@ -23,6 +24,7 @@ void main(){
     Normal = mat3(transpose(inverse(MODEL))) * normal;
     
     FragLightSpace = LIGHTSPACE * vec4(FragPos, 1.0);
+    FragLightSpace2 = LIGHTSPACE2 * vec4(FragPos, 1.0);
     
     gl_Position = PROJECTION * VIEW *  MODEL * vec4((vertex_position.x), (vertex_position.y), (vertex_position.z), 1);
     
